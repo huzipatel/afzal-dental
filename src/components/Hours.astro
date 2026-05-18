@@ -1,0 +1,57 @@
+---
+const hours = [
+  { day: "Monday",    times: "9:00 am — 8:00 pm", highlight: true },
+  { day: "Tuesday",   times: "9:00 am — 8:00 pm", highlight: true },
+  { day: "Wednesday", times: "9:00 am — 8:00 pm", highlight: true },
+  { day: "Thursday",  times: "9:00 am — 8:00 pm", highlight: true },
+  { day: "Friday",    times: "9:00 am — 6:00 pm" },
+  { day: "Saturday",  times: "10:00 am — 4:00 pm" },
+  { day: "Sunday",    times: "Closed", muted: true },
+];
+---
+
+<section id="hours" class="py-20 md:py-24 bg-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid md:grid-cols-12 gap-10 items-start">
+    <div class="md:col-span-5">
+      <p class="text-xs uppercase tracking-[0.18em] text-clinic font-semibold mb-4">Opening hours</p>
+      <h2 class="font-display text-3xl md:text-4xl text-deep-sea leading-tight">
+        Find a time that<br />
+        <span class="italic text-clinic">works for you.</span>
+      </h2>
+      <p class="mt-5 text-graphite leading-relaxed">
+        We hold evening clinics Monday to Thursday, late afternoons on Friday,
+        and a Saturday session for non-working hours. Emergency triage by phone
+        every working day before 6 pm.
+      </p>
+      <a
+        href="#contact"
+        class="mt-7 inline-flex items-center gap-2 text-deep-sea font-medium underline decoration-clinic/40 decoration-2 underline-offset-4 hover:decoration-clinic"
+      >
+        Get in touch to book
+        <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 10h10M11 6l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="md:col-span-7">
+      <div class="bg-mist rounded-2xl p-6 sm:p-8 border border-deep-sea/8">
+        <dl class="divide-y divide-deep-sea/8">
+          {hours.map((h) => (
+            <div class={`flex items-center justify-between py-3.5 ${h.muted ? "text-graphite/70" : "text-deep-sea"}`}>
+              <dt class="font-display text-lg flex items-center gap-3">
+                {h.day}
+                {h.highlight && (
+                  <span class="text-[10px] uppercase tracking-wider font-sans font-semibold bg-mint/60 text-clinic px-2 py-0.5 rounded-full">
+                    Late
+                  </span>
+                )}
+              </dt>
+              <dd class="font-sans text-[15px]">{h.times}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-deep-sea text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-12 grid md:grid-cols-12 gap-8">
+    <div class="md:col-span-5">
+      <div class="flex items-center gap-2">
+        <svg viewBox="0 0 32 32" class="w-7 h-7 text-mint" aria-hidden="true">
+          <path
+            d="M16 5c-3.5 0-5.5 1.5-5.5 3.5 0 1.8 1 3 1 5.5 0 4-2 6-2 9.5 0 2.5 1.5 4 3 4 1.8 0 2-2 3.5-2s1.7 2 3.5 2c1.5 0 3-1.5 3-4 0-3.5-2-5.5-2-9.5 0-2.5 1-3.7 1-5.5C21.5 6.5 19.5 5 16 5z"
+            fill="currentColor"
+          />
+        </svg>
+        <span class="font-display text-xl font-semibold">Afzal Dental</span>
+      </div>
+      <p class="mt-3 text-paper/70 text-sm leading-relaxed max-w-sm">
+        Trusted family, cosmetic and emergency dentistry — with appointments
+        that fit around your working life.
+      </p>
+    </div>
+
+    <div class="md:col-span-3">
+      <p class="text-xs uppercase tracking-wider text-mint mb-3 font-semibold">Visit</p>
+      <p class="text-sm text-paper/85 leading-relaxed">
+        Your clinic address<br />
+        Town · Postcode<br />
+        United Kingdom
+      </p>
+    </div>
+
+    <div class="md:col-span-4">
+      <p class="text-xs uppercase tracking-wider text-mint mb-3 font-semibold">Contact</p>
+      <ul class="space-y-1.5 text-sm text-paper/85">
+        <li>
+          <a href="tel:+440000000000" class="hover:text-mint">0000 000 0000</a>
+        </li>
+        <li>
+          <a href="mailto:hello@afzal.dental" class="hover:text-mint">hello@afzal.dental</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-paper/10">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-paper/60">
+      <p>© {year} Afzal Dental. All rights reserved.</p>
+      <p>CQC-registered · GDC-regulated · A practice in the United Kingdom.</p>
+    </div>
+  </div>
+</footer>

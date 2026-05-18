@@ -1,0 +1,49 @@
+---
+const nav = [
+  { href: "#services", label: "Services" },
+  { href: "#evenings", label: "Evening care" },
+  { href: "#about", label: "About" },
+  { href: "#hours", label: "Hours" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="sticky top-0 z-40 bg-paper/85 backdrop-blur-md border-b border-deep-sea/8">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between gap-6">
+    <a href="#" class="flex items-center gap-2 group" aria-label="Afzal Dental home">
+      <svg viewBox="0 0 32 32" class="w-7 h-7 text-turquoise" aria-hidden="true">
+        <path
+          d="M16 5c-3.5 0-5.5 1.5-5.5 3.5 0 1.8 1 3 1 5.5 0 4-2 6-2 9.5 0 2.5 1.5 4 3 4 1.8 0 2-2 3.5-2s1.7 2 3.5 2c1.5 0 3-1.5 3-4 0-3.5-2-5.5-2-9.5 0-2.5 1-3.7 1-5.5C21.5 6.5 19.5 5 16 5z"
+          fill="currentColor"
+        />
+      </svg>
+      <span class="font-display text-xl font-semibold text-deep-sea tracking-tight">
+        Afzal <span class="text-turquoise">Dental</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-graphite" aria-label="Primary">
+      {nav.map((n) => (
+        <a href={n.href} class="hover:text-deep-sea transition-colors">{n.label}</a>
+      ))}
+    </nav>
+
+    <a
+      href="#contact"
+      class="hidden sm:inline-flex items-center gap-1.5 bg-deep-sea text-paper text-sm font-medium px-4 py-2 rounded-full hover:bg-clinic transition-colors shadow-sm"
+    >
+      Book now
+      <svg viewBox="0 0 20 20" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M5 10h10M11 6l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+
+    <a
+      href="#contact"
+      class="sm:hidden inline-flex items-center bg-deep-sea text-paper text-sm font-medium px-3 py-1.5 rounded-full"
+      aria-label="Book an appointment"
+    >
+      Book
+    </a>
+  </div>
+</header>

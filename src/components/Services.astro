@@ -1,0 +1,73 @@
+---
+const services = [
+  {
+    title: "General & family",
+    body: "Routine check-ups, hygiene, fillings and treatment for every member of the family — from a child's first visit to a great-grandparent's denture review.",
+    icon: "general",
+  },
+  {
+    title: "Cosmetic dentistry",
+    body: "Composite bonding, veneers, professional whitening and smile design — meticulous craft, natural-looking results.",
+    icon: "cosmetic",
+  },
+  {
+    title: "Crowns, bridges & implants",
+    body: "Restorative work that lasts. CAD-designed, master-finished, made to feel like your own tooth.",
+    icon: "implant",
+  },
+  {
+    title: "Root canal therapy",
+    body: "Modern endodontics — quiet, comfortable, often saving a tooth in a single visit.",
+    icon: "endo",
+  },
+  {
+    title: "Invisible aligners",
+    body: "Clear-aligner orthodontics for adults and teens, planned by your dentist not a chatbot.",
+    icon: "aligner",
+  },
+  {
+    title: "Emergency care",
+    body: "Pain, swelling, a broken tooth? We hold daily slots for genuine urgencies, evenings included.",
+    icon: "emergency",
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  general: "M12 4l3 3-1 5 3 3-5 1-3 3-3-3-5-1 3-3-1-5 3-3 3-3z",
+  cosmetic: "M12 3l1.8 4 4.2.5-3 3 .8 4.2L12 13l-3.8 1.7.8-4.2-3-3 4.2-.5z",
+  implant: "M12 3v18M9 7h6M9 12h6",
+  endo: "M12 3c-3 0-5 2-5 5 0 2 1 3 1 5 0 4-2 5-2 7s2 1 3 1 1 0 3 0 2 1 3 1 2 0 2-1-2-3-2-7c0-2 1-3 1-5 0-3-2-6-4-6z",
+  aligner: "M5 10c2-3 5-4 7-4s5 1 7 4M5 14c2 3 5 4 7 4s5-1 7-4",
+  emergency: "M12 3l9 16H3L12 3zM12 10v4M12 17h.01",
+};
+---
+
+<section id="services" class="py-20 md:py-28">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <p class="text-xs uppercase tracking-[0.18em] text-clinic font-semibold mb-4">What we do</p>
+      <h2 class="font-display text-3xl md:text-4xl text-deep-sea">
+        Comprehensive dentistry, delivered with care.
+      </h2>
+      <p class="mt-4 text-graphite text-lg leading-relaxed">
+        Every treatment is planned around you — your comfort, your timeline, your
+        budget. Quiet rooms, gentle hands, and the kind of clinical detail that
+        comes from people who genuinely love this craft.
+      </p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {services.map((s) => (
+        <article class="group relative bg-paper rounded-2xl p-6 shadow-card hover:shadow-lift transition-shadow border border-deep-sea/5">
+          <div class="w-11 h-11 rounded-xl bg-mint/40 text-clinic flex items-center justify-center mb-5 group-hover:bg-turquoise group-hover:text-paper transition-colors">
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d={iconPaths[s.icon]} />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl text-deep-sea">{s.title}</h3>
+          <p class="mt-2 text-graphite leading-relaxed text-[15px]">{s.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
