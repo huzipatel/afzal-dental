@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-/* Afzal Dental — turquoise/elegant design tokens.
+/* Afzal Dental - turquoise/elegant design tokens.
    Tailwind v4 `@theme` mode: tokens become utilities (text-deep-sea, bg-mist, etc.) */
 @theme {
-  /* Brand palette — turquoise spectrum, evoking clinical clarity + craft. */
-  --color-deep-sea:   #0c4a4a;   /* primary navy-teal — headings, primary CTAs */
-  --color-clinic:     #0d8b8b;   /* mid turquoise — accents */
-  --color-turquoise:  #14b8a6;   /* signature turquoise — links, focus */
+  /* Brand palette - turquoise spectrum, evoking clinical clarity + craft. */
+  --color-deep-sea:   #0c4a4a;   /* primary navy-teal - headings, primary CTAs */
+  --color-clinic:     #0d8b8b;   /* mid turquoise - accents */
+  --color-turquoise:  #14b8a6;   /* signature turquoise - links, focus */
   --color-mint:       #a7f3d0;   /* highlight pill / soft accent */
   --color-mist:       #f0fafa;   /* page background */
   --color-paper:      #ffffff;   /* card / section */
@@ -14,7 +14,7 @@
   --color-graphite:   #4a5a5a;   /* secondary text */
   --color-warm-gold:  #d4a85a;   /* subtle craft accent (rare use) */
 
-  /* Typography — serif headings (trust/craft), sans body (clarity). */
+  /* Typography - serif headings (trust/craft), sans body (clarity). */
   --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
     linear-gradient(180deg, #ffffff 0%, var(--color-mist) 100%);
 }
 
-/* Focus state — accessible, brand-coloured. */
+/* Focus state - accessible, brand-coloured. */
 :where(a, button, input, textarea, select):focus-visible {
   outline: 2px solid var(--color-turquoise);
   outline-offset: 2px;
